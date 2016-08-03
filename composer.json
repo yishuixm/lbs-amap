@@ -3,6 +3,7 @@
     "description": "lbs.amap.com web service",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/yishuixm/lbs-amap",
     "minimum-stability": "stable",
     "keywords": ["lbs"],
     "authors": [
