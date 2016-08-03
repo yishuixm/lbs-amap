@@ -4,6 +4,13 @@
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
+    "keywords": ["sms"],
+    "authors": [
+        {
+            "name": "yishuixm",
+            "email": "1830802211@qq.com"
+        }
+    ],
     "require": {
         "php": ">=5.5.0"
     },
