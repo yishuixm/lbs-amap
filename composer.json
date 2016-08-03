@@ -1,6 +1,6 @@
 {
     "name": "yishuixm/lbs-amap",
-    "description": "lbs.amap.com web service",
+    "description": "amap web service",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/yishuixm/lbs-amap",
