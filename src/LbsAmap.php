@@ -25,7 +25,7 @@ class LbsAmap
     }
 
     // 逆地理编码API服务
-    public static function geocodeRegeo($key,$location,$poitype='',$radius='0',$extensions='',$batch='false',$roadlevel='',$output='JSON',$homeorcorp='0'){
+    public static function geocodeRegeo($key,$location,$poitype='',$radius='1000',$extensions='',$batch='false',$roadlevel='',$output='JSON',$homeorcorp='0'){
         $uri = "http://restapi.amap.com/v3/geocode/regeo";
         $data['key'] = $key;
         $data['location'] = $location;
