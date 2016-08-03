@@ -7,7 +7,7 @@
  * Time: 20:02
  */
 
-namespace com\amap\lbs;
+namespace yishuixm\lbs;
 
 class LbsAmap
 {
