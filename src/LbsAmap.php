@@ -40,4 +40,21 @@ class LbsAmap
         $qs = http_build_query($data);
         return @file_get_contents("{$uri}?{$qs}");
     }
+
+    // 路径坑规划
+    public static function distance($key,$origins,$destination,$type,$sign='',$output='JSON',$callback=''){
+        $uri = "http://restapi.amap.com/v3/distance";
+        $data['key'] = $key;
+        $data['origins'] = $origins;
+        $data['destination'] = $destination;
+        $data['type'] = $type;
+        if($sign)
+            $data['sign'] = $sign;
+        $data['output'] = $output;
+        if($callback)
+            $data['callback'] = $callback;
+
+        $qs = http_build_query($data);
+        return @file_get_contents("{$uri}?{$qs}");
+    }
 }
