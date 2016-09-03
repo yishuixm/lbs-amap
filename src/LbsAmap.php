@@ -57,4 +57,17 @@ class LbsAmap
         $qs = http_build_query($data);
         return @file_get_contents("{$uri}?{$qs}");
     }
+
+    // IP 定位
+    public static function ip($key, $ip, $sign, $output='JSON'){
+        $uri = "http://restapi.amap.com/v3/ip";
+        $data['key'] = $key;
+        $data['ip'] = $ip;
+        if($sign)
+            $data['sign'] = $sign;
+        $data['output'] = $output;
+
+        $qs = http_build_query($data);
+        return @file_get_contents("{$uri}?{$qs}");
+    }
 }
