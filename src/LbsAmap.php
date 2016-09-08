@@ -70,4 +70,29 @@ class LbsAmap
         $qs = http_build_query($data);
         return @file_get_contents("{$uri}?{$qs}");
     }
+
+    // 天气查询
+    public static function weatherInfo($key, $city, $extensions, $output='JSON'){
+        $uri = "http://restapi.amap.com/v3/weather/weatherInfo";
+        $data['key'] = $key;
+        $data['city'] = $city;
+        switch ($extensions){
+            case 'base':
+                // 实况天气
+                $data['city'] = 'base';
+                break;
+            case 'all':
+                // 预报天气
+                $data['city'] = 'all';
+                break;
+            default:
+                $data['city'] = 'base';
+                break;
+        }
+
+        $data['output'] = $output;
+
+        $qs = http_build_query($data);
+        return @file_get_contents("{$uri}?{$qs}");
+    }
 }
