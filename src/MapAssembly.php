@@ -22,10 +22,11 @@ class MapAssembly
     }
 
     // 路线规划
-    public function navi($start,$dest,$destName='',$naviBy=''){
+    public function navi($start='',$dest,$destName='',$naviBy=''){
         $uri = "http://m.amap.com/navi/";
         $data['key'] = $this->key;
-        $data['start'] = $start;
+        if($start)
+            $data['start'] = $start;
         $data['dest'] = $dest;
         $data['destName'] = $destName;
         if($naviBy)
