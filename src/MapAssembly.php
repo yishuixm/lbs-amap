@@ -37,10 +37,20 @@ class MapAssembly
     }
 
     // 导航界面
-    public function naviget($from,$to){
+    public function naviget($from,$to,$pass='',$type='',$opt='',$dev='',$src=''){
         $uri = "http://m.amap.com/";
         $data['from'] = $from;
         $data['to'] = $to;
+        if($pass)
+            $data['pass'] = $pass;
+        if($type)
+            $data['type'] = $type;
+        if($opt)
+            $data['opt'] = $opt;
+        if($dev)
+            $data['dev'] = $dev;
+        if($src)
+            $data['src'] = $src;
 
         $qs = http_build_query($data);
         return "{$uri}?{$qs}";
