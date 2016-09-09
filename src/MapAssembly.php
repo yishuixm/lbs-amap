@@ -36,6 +36,16 @@ class MapAssembly
         return "{$uri}?{$qs}";
     }
 
+    // 导航界面
+    public function naviget($from,$to){
+        $uri = "http://m.amap.com/";
+        $data['from'] = $from;
+        $data['to'] = $to;
+
+        $qs = http_build_query($data);
+        return "{$uri}?{$qs}";
+    }
+
     // 选址组件
     public function picker($center=''){
         $uri = "http://m.amap.com/picker/";
