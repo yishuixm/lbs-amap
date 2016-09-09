@@ -17,7 +17,7 @@ class MapAssembly
         $this->key = $key;
     }
 
-    public function WebServiceApi($key){
+    public function MapAssembly($key){
         $this->__construct($key);
     }
 
